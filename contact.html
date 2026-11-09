@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>155914 - Contact Shahed Amjad Rawahneh</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("fullname").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let country = document.getElementById("country").value.trim();
+            let comments = document.getElementById("comments").value.trim();
+
+            if (name === "" || email === "" || country === "" || comments === "") {
+                alert("Please fill in all the fields before submitting!");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <main>
+        <form onsubmit="validateForm(event)">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="country">Country:</label><br>
+            <input type="text" id="country" name="country"><br><br>
+
+            <label for="comments">Comments / Message:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shahed Amjad Rawahneh - Student ID: 155914</p>
+    </footer>
+
+</body>
+</html>
